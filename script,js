@@ -1,0 +1,45 @@
+/* ==============================
+   INTERNET PACO
+   JavaScript
+   ============================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("Internet Paco iniciado correctamente.");
+
+    /*
+     * Animación suave de las estrellas.
+     * Se mantiene muy discreta para conservar
+     * el estilo de la plantilla original.
+     */
+
+    const estrellas = document.querySelectorAll(".estrella");
+
+    estrellas.forEach((estrella, index) => {
+
+        estrella.animate(
+            [
+                {
+                    transform: "scale(1) rotate(0deg)",
+                    opacity: "0.85"
+                },
+                {
+                    transform: "scale(1.08) rotate(5deg)",
+                    opacity: "1"
+                },
+                {
+                    transform: "scale(1) rotate(0deg)",
+                    opacity: "0.85"
+                }
+            ],
+            {
+                duration: 2500 + (index * 400),
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+
+    });
+
+});
+

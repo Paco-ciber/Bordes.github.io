@@ -1,0 +1,541 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #f8f4eb;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   PÁGINA
+   ============================== */
+
+.pagina {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f4eb;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   MARCO PRINCIPAL
+   ============================== */
+
+.contenido {
+    position: relative;
+
+    width: calc(100% - 170px);
+    min-height: calc(100vh - 160px);
+
+    margin: 80px 85px;
+
+    border: 5px solid #f5a98b;
+    border-right: 0;
+
+    border-radius: 45px 45px 0 45px;
+
+    background: rgba(255, 252, 245, 0.35);
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   TÍTULO
+   ============================== */
+
+h1 {
+    position: relative;
+
+    margin-top: 55px;
+    margin-left: 70px;
+
+    color: #3f4b4a;
+
+    font-size: clamp(40px, 5vw, 88px);
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+
+    z-index: 10;
+}
+
+h2 {
+        position: relative;
+
+    margin-top: 10px;
+    margin-left: 70px;
+
+    color: #5f7e7c;
+
+    font-size: clamp(10px, 2vw, 20px);
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+
+    z-index: 10;
+
+
+}
+
+
+/* ==============================
+   ÁREA DE CONTENIDO
+   ============================== */
+
+.contenido-principal {
+    position: relative;
+
+    width: 90%;
+    min-height: 500px;
+
+    margin: 60px auto;
+
+    z-index: 10;
+}
+
+.imagen {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease; /* animación suave */
+  cursor: pointer;
+}
+
+.imagen:hover {
+  transform: scale(1.1); /* crece un poco al pasar el mouse */
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* ocupa todo el ancho */
+  height: 100vh;  /* ocupa todo el alto */
+  object-fit: contain; /* ajusta la imagen */
+  background: rgba(0,0,0,0.9); /* fondo oscuro */
+  z-index: 9999;
+}
+
+
+/* ==============================
+   ESTRELLAS
+   ============================== */
+
+.estrella {
+    position: absolute;
+
+    color: #f29a6c;
+
+    font-size: 58px;
+
+    line-height: 1;
+
+    z-index: 8;
+
+    text-shadow:
+        0 2px 2px rgba(190, 110, 70, 0.12);
+}
+
+.estrella-1 {
+    top: 18px;
+    left: 25%;
+}
+
+.estrella-2 {
+    top: 18px;
+    left: 66%;
+}
+
+.estrella-3 {
+    top: 90px;
+    right: 2%;
+}
+
+.estrella-bottom-1 {
+    bottom: 22px;
+    left: 40%;
+}
+
+.estrella-bottom-2 {
+    bottom: 15px;
+    left: 2%;
+}
+
+
+/* ==============================
+   ONDAS AZULES
+   ============================== */
+
+.onda {
+    position: absolute;
+
+    background: #a8c5dc;
+
+    opacity: 0.85;
+
+    z-index: 3;
+}
+
+
+/* Ondas superiores */
+
+.onda-top-1 {
+    top: -25px;
+    left: 37%;
+
+    width: 230px;
+    height: 85px;
+
+    border-radius:
+        0 0 35px 35px;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 70%,
+        85% 100%,
+        70% 70%,
+        55% 100%,
+        40% 70%,
+        25% 100%,
+        0 75%
+    );
+}
+
+.onda-top-2 {
+    top: -25px;
+    right: 3%;
+
+    width: 230px;
+    height: 85px;
+
+    border-radius: 0 0 35px 35px;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 70%,
+        85% 100%,
+        70% 70%,
+        55% 100%,
+        40% 70%,
+        25% 100%,
+        0 75%
+    );
+}
+
+
+/* ==============================
+   ONDAS LATERALES IZQUIERDAS
+   ============================== */
+
+.onda-left-1 {
+    left: -5px;
+    top: 16%;
+
+    width: 55px;
+    height: 230px;
+
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 15%,
+        70% 30%,
+        100% 45%,
+        70% 60%,
+        100% 75%,
+        70% 100%,
+        0 100%
+    );
+}
+
+.onda-left-2 {
+    left: -5px;
+    top: 45%;
+
+    width: 65px;
+    height: 230px;
+
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 15%,
+        70% 30%,
+        100% 45%,
+        70% 60%,
+        100% 75%,
+        70% 100%,
+        0 100%
+    );
+}
+
+.onda-left-3 {
+    left: -5px;
+    bottom: 10%;
+
+    width: 70px;
+    height: 230px;
+
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 15%,
+        70% 30%,
+        100% 45%,
+        70% 60%,
+        100% 75%,
+        70% 100%,
+        0 100%
+    );
+}
+
+
+/* ==============================
+   ONDAS LATERALES DERECHAS
+   ============================== */
+
+.onda-right-1 {
+    right: -5px;
+    top: 13%;
+
+    width: 65px;
+    height: 230px;
+
+    clip-path: polygon(
+        100% 0,
+        25% 0,
+        0 15%,
+        30% 30%,
+        0 45%,
+        30% 60%,
+        0 75%,
+        30% 100%,
+        100% 100%
+    );
+}
+
+.onda-right-2 {
+    right: -5px;
+    top: 41%;
+
+    width: 65px;
+    height: 230px;
+
+    clip-path: polygon(
+        100% 0,
+        25% 0,
+        0 15%,
+        30% 30%,
+        0 45%,
+        30% 60%,
+        0 75%,
+        30% 100%,
+        100% 100%
+    );
+}
+
+.onda-right-3 {
+    right: -5px;
+    bottom: 10%;
+
+    width: 65px;
+    height: 230px;
+
+    clip-path: polygon(
+        100% 0,
+        25% 0,
+        0 15%,
+        30% 30%,
+        0 45%,
+        30% 60%,
+        0 75%,
+        30% 100%,
+        100% 100%
+    );
+}
+
+
+/* ==============================
+   ONDAS INFERIORES
+   ============================== */
+
+.onda-bottom-1 {
+    bottom: -15px;
+    left: 11%;
+
+    width: 230px;
+    height: 85px;
+
+    clip-path: polygon(
+        0 30%,
+        15% 0,
+        30% 40%,
+        45% 10%,
+        60% 45%,
+        75% 15%,
+        90% 45%,
+        100% 20%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.onda-bottom-2 {
+    bottom: -15px;
+    left: 51%;
+
+    width: 230px;
+    height: 85px;
+
+    clip-path: polygon(
+        0 30%,
+        15% 0,
+        30% 40%,
+        45% 10%,
+        60% 45%,
+        75% 15%,
+        90% 45%,
+        100% 20%,
+        100% 100%,
+        0 100%
+    );
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .contenido {
+        width: calc(100% - 60px);
+        margin: 60px 30px;
+        min-height: calc(100vh - 120px);
+    }
+
+    h1 {
+        margin-left: 35px;
+        font-size: clamp(32px, 8vw, 65px);
+    }
+
+    .estrella {
+        font-size: 42px;
+    }
+
+    .onda-top-1,
+    .onda-top-2 {
+        width: 160px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .contenido {
+        width: calc(100% - 30px);
+        margin: 45px 15px;
+        min-height: calc(100vh - 90px);
+        border-width: 3px;
+        border-radius: 30px 30px 0 30px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-left: 25px;
+        letter-spacing: 1px;
+        font-size: 35px;
+    }
+
+    .contenido-principal {
+        width: 85%;
+        margin-top: 40px;
+    }
+
+    .onda-left-1,
+    .onda-left-2,
+    .onda-left-3,
+    .onda-right-1,
+    .onda-right-2,
+    .onda-right-3 {
+        width: 35px;
+    }
+
+    .onda-top-1,
+    .onda-top-2 {
+        width: 120px;
+        height: 55px;
+    }
+
+    .onda-bottom-1,
+    .onda-bottom-2 {
+        width: 140px;
+        height: 55px;
+    }
+
+    .estrella {
+        font-size: 32px;
+    }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.whatsapp-float img {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  animation: blink 3s infinite; /* activa la animación */
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.contenedor {
+  position: relative;
+  display: inline-block;
+}
+
+.contenedor img {
+  display: block;
+}
+
+.marca {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+  font-weight: bold;
+}
